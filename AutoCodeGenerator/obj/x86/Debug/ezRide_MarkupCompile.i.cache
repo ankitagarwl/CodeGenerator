@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\working\AutoCodeGenerator\AutoCodeGenerator\obj\x86\Debug\
+D:\working\CodeGenerator\AutoCodeGenerator\obj\x86\Debug\
 ezRide
 none
 false
 DEBUG;TRACE
-D:\working\AutoCodeGenerator\AutoCodeGenerator\App.xaml
+D:\working\CodeGenerator\AutoCodeGenerator\App.xaml
 31177768982
 
 161742329431
-391780712941
+39-944689327
 LoginForm.xaml;ReportFormRibbon.xaml;Views\GenerateCsharpDAL.xaml;
 
 False

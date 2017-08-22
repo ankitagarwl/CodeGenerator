@@ -8,6 +8,7 @@ namespace AutoCodeGenerator
 {
     public class EnvironmentData : ConfigurationSection
     {
+
         public EnvironmentData()
         {
         }
