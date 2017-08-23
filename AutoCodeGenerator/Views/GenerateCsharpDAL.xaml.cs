@@ -148,10 +148,9 @@ namespace AutoCodeGenerator.Views
             DataSet ds = new DataSet();
             try
             {
-              //  string oradb = "Data Source=(DESCRIPTION="
-              //+ "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.0.11)(PORT=1521)))"
-              //+ "(CONNECT_DATA=(SERVER=Default)(SERVICE_NAME=ORCL)));"
-              //+ "User Id=ezride;Password=ad#ujjwal;";
+
+              
+
                 string oradb = UtilConstants.mssqldb;
 
                 string cmdtxt = "  select lower(owner || '.' || object_name) as owner_package, owner  , object_name as package from all_procedures " +
@@ -170,7 +169,7 @@ namespace AutoCodeGenerator.Views
                         while (dr.Read())
                         {
                             //items.Add(String.Format("{0}, {1}", dr.GetValue(0), dr.GetValue(1)));
-                            cbrptbymem.Items.Add(dr.GetValue(2));
+                            cbrptbymem.Items.Add(dr.GetValue(0));
                         }
                         
                         //TB_PRODUCTS.Items.AddRange(items.ToArray());
@@ -248,13 +247,19 @@ namespace AutoCodeGenerator.Views
             DataSet ds = new DataSet();
             try
             {
+                string selectedval = cbrptbymem.SelectedValue.ToString();
+                string[] arr = selectedval.Split('.');
                 //  string oradb = "Data Source=(DESCRIPTION="
                 //+ "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.0.11)(PORT=1521)))"
                 //+ "(CONNECT_DATA=(SERVER=Default)(SERVICE_NAME=ORCL)));"
                 //+ "User Id=ezride;Password=ad#ujjwal;";
                 string oradb = UtilConstants.mssqldb;
 
-                string cmdtxt = @"select * from NAMES_PROCEDURE";
+                string cmdtxt = "   select owner as owner_name, procedure_name  from all_Procedures " +
+                                    " where procedure_name like '%USP%' "  +
+                                    " and owner = UPPER('" + arr[0] + "') " +
+                                    " and object_name = UPPER('" + arr[1] + "')  group by procedure_name,owner " +
+                                    " order by procedure_name";
 
                 OracleConnection conn = new OracleConnection(oradb);
                 using (OracleCommand cmd = new OracleCommand(cmdtxt, conn))

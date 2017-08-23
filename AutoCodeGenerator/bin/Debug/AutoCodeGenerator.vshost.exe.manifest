@@ -48,14 +48,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoCodeGenerator.exe" size="313856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoCodeGenerator.exe" size="314368">
       <assemblyIdentity name="AutoCodeGenerator" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zjLzOZPm8ufUWkpkuwfaf0SWzosM9CUlHSz1KUr4GJE=</dsig:DigestValue>
+        <dsig:DigestValue>ips66yp2r3VntBjOIv4u86KCt1TVJWVR8U3BbSReL9Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
