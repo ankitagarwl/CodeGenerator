@@ -14,14 +14,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="AutoCodeGenerator.exe.manifest" size="11987">
+    <dependentAssembly dependencyType="install" codebase="AutoCodeGenerator.exe.manifest" size="12670">
       <assemblyIdentity name="AutoCodeGenerator.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xc4MYaUu1Pp+14subd1adIq2cPMQRR93Uksr6xs2Hfo=</dsig:DigestValue>
+        <dsig:DigestValue>6W/pe7dD3OchUl4QZGFxCoJmZUrlr5dwHkuprpi3lGg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

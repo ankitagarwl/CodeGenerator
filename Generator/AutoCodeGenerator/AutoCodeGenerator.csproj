@@ -164,6 +164,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EZRIDEDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BE.cs" />
+    <Compile Include="BO.cs" />
     <Compile Include="New.cs" />
     <Compile Include="RiderAddress.cs" />
     <Compile Include="Utilities\EnvironmentData.cs" />
@@ -297,6 +299,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="standardabbreviations.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

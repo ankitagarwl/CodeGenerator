@@ -48,14 +48,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoCodeGenerator.exe" size="314368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoCodeGenerator.exe" size="822272">
       <assemblyIdentity name="AutoCodeGenerator" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e6OTMYGe4zj5CmvbDSUAh09FwsJxbhgDVSo5Gd6EopE=</dsig:DigestValue>
+        <dsig:DigestValue>Bcx1PpJcxvbhxz0oMLfT+NoAMR9llL5VYGFw6sOJKyM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -156,6 +156,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="502272">
+      <assemblyIdentity name="Newtonsoft.Json" version="6.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Dt+sa+EXMt3ZnbZoIe5HQIwtwem+1o5e+ajhMMVlt5s=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NLog.dll" size="388096">
       <assemblyIdentity name="NLog" version="2.0.0.0" publicKeyToken="5120E14C03D0593C" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -191,13 +203,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AutoCodeGenerator.exe.config" size="2844">
+  <file name="AutoCodeGenerator.exe.config" size="2899">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZVymLrk7zTlJbA++QNEy3uDTLPdR8w8vyV4HcaLmlOU=</dsig:DigestValue>
+      <dsig:DigestValue>NYvKKFgUtYNKOrBk/CmVG3F9hcJut/mQrVXzS0kdeos=</dsig:DigestValue>
     </hash>
   </file>
   <file name="favicon.ico" size="1086">
