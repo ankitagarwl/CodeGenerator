@@ -1,0 +1,60 @@
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\csc.exe
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\System.Collections.Immutable.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\System.Reflection.Metadata.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\vbc.exe
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\VBCSCompiler.exe
+D:\working\CodeGenerator\CodeGenerator_web\bin\roslyn\VBCSCompiler.exe.config
+D:\working\CodeGenerator\CodeGenerator_web\bin\CodeGenerator_web.dll.config
+D:\working\CodeGenerator\CodeGenerator_web\bin\CodeGenerator_web.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\CodeGenerator_web.pdb
+D:\working\CodeGenerator\CodeGenerator_web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\Newtonsoft.Json.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\System.Net.Http.Formatting.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\System.Web.Http.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\System.Web.Http.WebHost.dll
+D:\working\CodeGenerator\CodeGenerator_web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\working\CodeGenerator\CodeGenerator_web\bin\Newtonsoft.Json.xml
+D:\working\CodeGenerator\CodeGenerator_web\bin\System.Net.Http.Formatting.xml
+D:\working\CodeGenerator\CodeGenerator_web\bin\System.Web.Http.xml
+D:\working\CodeGenerator\CodeGenerator_web\bin\System.Web.Http.WebHost.xml
+D:\working\CodeGenerator\CodeGenerator_web\obj\Debug\CodeGenerator_web.csprojResolveAssemblyReference.cache
+D:\working\CodeGenerator\CodeGenerator_web\obj\Debug\CodeGenerator_web.dll
+D:\working\CodeGenerator\CodeGenerator_web\obj\Debug\CodeGenerator_web.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\csc.exe
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\System.Collections.Immutable.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\System.Reflection.Metadata.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\vbc.exe
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\VBCSCompiler.exe
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\roslyn\VBCSCompiler.exe.config
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\CodeGenerator_web.dll.config
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\CodeGenerator_web.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\CodeGenerator_web.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\CodeGenerator_BAL.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\CodeGenerator_stateclass.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\Newtonsoft.Json.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\System.Net.Http.Formatting.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\System.Web.Http.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\System.Web.Http.WebHost.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\CodeGenerator_BAL.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\CodeGenerator_stateclass.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\Newtonsoft.Json.xml
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\System.Net.Http.Formatting.xml
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\System.Web.Http.xml
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\bin\System.Web.Http.WebHost.xml
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\obj\Debug\CodeGenerator_web.csprojResolveAssemblyReference.cache
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\obj\Debug\CodeGenerator_web.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_web\obj\Debug\CodeGenerator_web.pdb

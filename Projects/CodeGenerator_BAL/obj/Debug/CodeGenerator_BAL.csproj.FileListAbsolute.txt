@@ -1,0 +1,14 @@
+D:\working\CodeGenerator\CodeGenerator_BAL\bin\Debug\CodeGenerator_BAL.dll
+D:\working\CodeGenerator\CodeGenerator_BAL\bin\Debug\CodeGenerator_BAL.pdb
+D:\working\CodeGenerator\CodeGenerator_BAL\bin\Debug\CodeGenerator_stateclass.dll
+D:\working\CodeGenerator\CodeGenerator_BAL\bin\Debug\CodeGenerator_stateclass.pdb
+D:\working\CodeGenerator\CodeGenerator_BAL\obj\Debug\CodeGenerator_BAL.csprojResolveAssemblyReference.cache
+D:\working\CodeGenerator\CodeGenerator_BAL\obj\Debug\CodeGenerator_BAL.dll
+D:\working\CodeGenerator\CodeGenerator_BAL\obj\Debug\CodeGenerator_BAL.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_BAL\bin\Debug\CodeGenerator_BAL.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_BAL\bin\Debug\CodeGenerator_BAL.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_BAL\bin\Debug\CodeGenerator_stateclass.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_BAL\bin\Debug\CodeGenerator_stateclass.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_BAL\obj\Debug\CodeGenerator_BAL.csprojResolveAssemblyReference.cache
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_BAL\obj\Debug\CodeGenerator_BAL.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_BAL\obj\Debug\CodeGenerator_BAL.pdb

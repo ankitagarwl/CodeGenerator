@@ -1,0 +1,8 @@
+D:\working\CodeGenerator\CodeGenerator_stateclass\bin\Debug\CodeGenerator_stateclass.dll
+D:\working\CodeGenerator\CodeGenerator_stateclass\bin\Debug\CodeGenerator_stateclass.pdb
+D:\working\CodeGenerator\CodeGenerator_stateclass\obj\Debug\CodeGenerator_stateclass.dll
+D:\working\CodeGenerator\CodeGenerator_stateclass\obj\Debug\CodeGenerator_stateclass.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_stateclass\bin\Debug\CodeGenerator_stateclass.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_stateclass\bin\Debug\CodeGenerator_stateclass.pdb
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_stateclass\obj\Debug\CodeGenerator_stateclass.dll
+D:\CodeGenerator - Copy - Copy_25082017\CodeGenerator - Copy - Copy\CodeGenerator_stateclass\obj\Debug\CodeGenerator_stateclass.pdb
