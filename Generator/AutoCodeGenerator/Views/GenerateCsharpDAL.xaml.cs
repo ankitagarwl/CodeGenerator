@@ -145,7 +145,7 @@ namespace AutoCodeGenerator.Views
             // this holds all generated output 
             StringBuilder sb = new StringBuilder();
 
-            for (int i = 0; i <= GetMax(); i++)
+            for (int i = 0; i <= GetMax()-1; i++)
             {
                 GenerateCSharpCode(dc, items[i].ToString(), max, sb);
 
@@ -176,12 +176,12 @@ namespace AutoCodeGenerator.Views
             //dc.CodeTypeToGenerate = Enums.CodeType.ServiceCallCode
             //GenerateCSharpCode(dc, items, max, sb)
 
-            if (System.Configuration.ConfigurationManager.AppSettings["cacheImplementation"].Equals("off", StringComparison.InvariantCultureIgnoreCase))
-            {
-                max = 0;
-            }
+            //if (System.Configuration.ConfigurationManager.AppSettings["cacheImplementation"].Equals("off", StringComparison.InvariantCultureIgnoreCase))
+            //{
+            //    max = 0;
+            //}
 
-            GenerateAppSettingDuration(dc, items, max, sb);
+            //GenerateAppSettingDuration(dc, items, max, sb);
 
             // CodeOutput.Text = sb.ToString
 
