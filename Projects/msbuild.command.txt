@@ -1,0 +1,7 @@
+C:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe C:\projects\pacses_system\DeriveParameters\UserInterface\UserInterface.vbproj /t:publish /p:Configuration=Release /p:ApplicationVersion=1.0.0.4
+
+mage -update C:\projects\pacses_system\DeriveParameters\UserInterface\bin\Release\app.publish\DALGenerator.UI.application -pu http://pwpvmdevapp03/securitytest1/DALGenerator.UI.application
+
+mage -sign C:\projects\pacses_system\DeriveParameters\UserInterface\bin\Release\app.publish\DALGenerator.UI.application -cf C:\projects\pacses_system\DeriveParameters\UserInterface\UserInterface_TemporaryKey.pfx
+
+

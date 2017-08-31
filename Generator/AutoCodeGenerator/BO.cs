@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Text;
 //using Oracle.DataAccess.Client;
 using System.Configuration;
-
+using System.Data.OracleClient;
 
 namespace AutoCodeGenerator
 {
@@ -29,9 +29,9 @@ namespace AutoCodeGenerator
         const string executeCsharpNonQuery = "int returnCode = dataProvider.ExecuteNonQuery(command)";
 
         const string qq = "";//Strings.Chr(34);ankit
-        private static string entityName;
+        public static string entityName;
 
-        private static string methodName;
+        public static string methodName;
 
         public static DataSet ds = new DataSet();
 
@@ -655,54 +655,54 @@ namespace AutoCodeGenerator
         //    _with9.AppendLine("End Class");
         //}
 
-        //private static void WriteCSharpBusinessEntity(OracleCommand cmd, StringBuilder sb, BE dc)
-        //{
-        //    var _with10 = sb;
-        //    _with10.AppendLine("[DataContract()]");
-        //    _with10.AppendLine("public class " + GetMethodName(dc.StoredProcedure.ToLower) + "BE");
-        //    _with10.AppendLine("{ ");
-        //    bool dataSetNotIncluded = true;
-        //    foreach (OracleParameter param in cmd.Parameters)
-        //    {
-        //        string parameterName = ReverseParameterName(param.ParameterName.ToLower());
-        //        if (!IsObject(param.DbType.ToString))
-        //        {
-        //            _with10.AppendLine(param.DbType.ToString + " _" + parameterName + ";");
+        public static void WriteCSharpBusinessEntity(OracleCommand cmd, StringBuilder sb, BE dc)
+        {
+            //var _with10 = sb;
+            sb.AppendLine("[DataContract()]");
+            sb.AppendLine("public class " + GetMethodName(dc.StoredProcedure.ToLower()) + "BE");
+            sb.AppendLine("{ ");
+            bool dataSetNotIncluded = true;
+            foreach (OracleParameter param in cmd.Parameters)
+            {
+                string parameterName = ReverseParameterName(param.ParameterName.ToLower());
+                if (param.DbType.ToString() != typeof(object).ToString())
+                {
+                    sb.AppendLine(param.DbType.ToString() + " _" + parameterName + ";");
 
-        //        }
-        //        else if (dataSetNotIncluded)
-        //        {
-        //            dataSetNotIncluded = false;
-        //            _with10.AppendLine("DataSet _ds = new DataSet();");
-        //        }
-        //    }
+                }
+                else if (dataSetNotIncluded)
+                {
+                    dataSetNotIncluded = false;
+                    sb.AppendLine("DataSet _ds = new DataSet();");
+                }
+            }
 
-        //    dataSetNotIncluded = true;
-        //    foreach (OracleParameter param in cmd.Parameters)
-        //    {
-        //        string parameterName = ReverseParameterName(param.ParameterName.ToLower());
-        //        if (!IsObject(param.DbType.ToString))
-        //        {
-        //            _with10.AppendLine("[DataMember()]");
-        //            _with10.Append("public ");
-        //            _with10.Append(param.DbType.ToString + " ");
-        //            _with10.AppendLine(Capitalize(parameterName) + " { ");
-        //            _with10.AppendLine("    " + "get { " + "return  _" + parameterName + "; }");
-        //            _with10.AppendLine("    " + "set { _" + parameterName + " = value; }");
-        //            _with10.AppendLine("}");
-        //        }
-        //        else if (dataSetNotIncluded)
-        //        {
-        //            dataSetNotIncluded = false;
-        //            _with10.AppendLine("[DataMember()]");
-        //            _with10.AppendLine("public DataSet ds { ");
-        //            _with10.AppendLine("   " + "get { return _ds; }");
-        //            _with10.AppendLine("   " + "set { _ds = value; }");
-        //            _with10.AppendLine("}");
-        //        }
-        //    }
-        //    _with10.AppendLine("}");
-        //}
+            dataSetNotIncluded = true;
+            foreach (OracleParameter param in cmd.Parameters)
+            {
+                string parameterName = ReverseParameterName(param.ParameterName.ToLower());
+                if (param.DbType.ToString() != typeof(object).ToString())
+                {
+                    sb.AppendLine("[DataMember()]");
+                    sb.Append("public ");
+                    sb.Append(param.DbType.ToString() + " ");
+                    sb.AppendLine(Capitalize(parameterName) + " { ");
+                    sb.AppendLine("    " + "get { " + "return  _" + parameterName + "; }");
+                    sb.AppendLine("    " + "set { _" + parameterName + " = value; }");
+                    sb.AppendLine("}");
+                }
+                else if (dataSetNotIncluded)
+                {
+                    dataSetNotIncluded = false;
+                    sb.AppendLine("[DataMember()]");
+                    sb.AppendLine("public DataSet ds { ");
+                    sb.AppendLine("   " + "get { return _ds; }");
+                    sb.AppendLine("   " + "set { _ds = value; }");
+                    sb.AppendLine("}");
+                }
+            }
+            sb.AppendLine("}");
+        }
 
         //private static void WriteBusinessObject(OracleCommand cmd, StringBuilder sb, BE dc)
         //{
@@ -1142,24 +1142,24 @@ namespace AutoCodeGenerator
         #endregion
 
         #region "Common Functions"
-        //public static OracleCommand GetOracleCommand(OracleConnection conn, BE dc)
-        //{
-        //    ds = dc.StandardAbbreviations;
-        //    OracleCommand cmd = conn.CreateCommand();
-        //    cmd.CommandText = dc.Owner + "." + dc.Package + "." + dc.StoredProcedure;
-        //    cmd.CommandType = CommandType.StoredProcedure;
+        public static OracleCommand GetOracleCommand(OracleConnection conn, BE dc)
+        {
+            ds = dc.StandardAbbreviations;
+            OracleCommand cmd = conn.CreateCommand();
+            cmd.CommandText = dc.Owner + "." + dc.Package + "." + dc.StoredProcedure;
+            cmd.CommandType = CommandType.StoredProcedure;
 
-        //    var _with11 = conn;
-        //    try
-        //    {
-        //        OracleCommandBuilder.DeriveParameters(cmd);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Interaction.MsgBox(ex.ToString);
-        //    }
-        //    return cmd;
-        //}
+            var _with11 = conn;
+            try
+            {
+                OracleCommandBuilder.DeriveParameters(cmd);
+            }
+            catch (Exception ex)
+            {
+              //  Interaction.MsgBox(ex.ToString);
+            }
+            return cmd;
+        }
 
         //private static object GetStoredProcedureDescription(BE dc)
         //{
@@ -1205,18 +1205,18 @@ namespace AutoCodeGenerator
         //    return direction;
         //}
 
-        //private static string ReverseParameterName(string var)
-        //{
-        //    string[] sep = { "_" };
-        //    string[] arr = var.Split(sep, StringSplitOptions.RemoveEmptyEntries);
-        //    StringBuilder sb = new StringBuilder();
-        //    for (int i = arr.GetUpperBound(0); i >= 1; i += -1)
-        //    {
-        //        sb.Append(GetExpandedWord(arr(i)));
-        //    }
-        //    var = sb.ToString();
-        //    return char.ToLower(var(0)) + var.Substring(1);
-        //}
+        private static string ReverseParameterName(string var)
+        {
+            string[] sep = { "_" };
+            string[] arr = var.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+            StringBuilder sb = new StringBuilder();
+            for (int i = arr.GetUpperBound(0); i >= 1; i += -1)
+            {
+                sb.Append(GetExpandedWord(arr[i]));
+            }
+            var = sb.ToString();
+            return char.ToLower(var[0]) + var.Substring(1);
+        }
 
         private static string GetExpandedWord(string abbreviation)
         {
@@ -1260,7 +1260,7 @@ namespace AutoCodeGenerator
             return char.ToUpper(var[0]) + var.Substring(1);
         }
 
-        private static string GetMethodName(string var)
+        public static string GetMethodName(string var)
         {
             string[] sep = { "_" };
             string[] arr = var.Split(sep, StringSplitOptions.RemoveEmptyEntries);

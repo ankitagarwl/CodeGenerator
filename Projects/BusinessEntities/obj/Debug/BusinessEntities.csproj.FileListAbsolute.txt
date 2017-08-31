@@ -1,0 +1,5 @@
+D:\working\CodeGenerator\Projects\BusinessEntities\bin\Debug\BusinessEntities.dll
+D:\working\CodeGenerator\Projects\BusinessEntities\bin\Debug\BusinessEntities.pdb
+D:\working\CodeGenerator\Projects\BusinessEntities\obj\Debug\BusinessEntities.csprojResolveAssemblyReference.cache
+D:\working\CodeGenerator\Projects\BusinessEntities\obj\Debug\BusinessEntities.dll
+D:\working\CodeGenerator\Projects\BusinessEntities\obj\Debug\BusinessEntities.pdb

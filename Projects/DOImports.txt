@@ -1,0 +1,6 @@
+Imports PA.DPW.PACSES.Utilities
+Imports PA.DPW.PACSES.BaseClasses
+Imports PA.DPW.PACSES.DataAccessLayer
+Imports PA.DPW.PACSES.BusinessObjects
+Imports System.Data.Common
+Imports PA.DPW.PACSES.DataServices.BusinessEntities

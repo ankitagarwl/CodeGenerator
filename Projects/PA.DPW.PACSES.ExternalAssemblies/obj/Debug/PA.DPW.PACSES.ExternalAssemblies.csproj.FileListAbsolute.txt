@@ -1,0 +1,5 @@
+D:\working\CodeGenerator\Projects\PA.DPW.PACSES.ExternalAssemblies\bin\Debug\PA.DPW.PACSES.ExternalAssemblies.dll
+D:\working\CodeGenerator\Projects\PA.DPW.PACSES.ExternalAssemblies\bin\Debug\PA.DPW.PACSES.ExternalAssemblies.pdb
+D:\working\CodeGenerator\Projects\PA.DPW.PACSES.ExternalAssemblies\obj\Debug\PA.DPW.PACSES.ExternalAssemblies.csprojResolveAssemblyReference.cache
+D:\working\CodeGenerator\Projects\PA.DPW.PACSES.ExternalAssemblies\obj\Debug\PA.DPW.PACSES.ExternalAssemblies.dll
+D:\working\CodeGenerator\Projects\PA.DPW.PACSES.ExternalAssemblies\obj\Debug\PA.DPW.PACSES.ExternalAssemblies.pdb

@@ -92,7 +92,7 @@ namespace AutoCodeGenerator.Views
             _worker.RunWorkerAsync();
             createstmtemp.IsEnabled = false;
             _btnCancelemp.IsEnabled = true;
-            
+
         }
 
         private void _btnCancelemp_Click(object sender, RoutedEventArgs e)
@@ -130,10 +130,10 @@ namespace AutoCodeGenerator.Views
 
         private void CreateReportsEmp(DoWorkEventArgs e)
         {
-            //BE dc = GetBE();
-            //dc._codeType = Enums.CodeType.API;
+
             string a = "";
-            Dispatcher.Invoke(new Action(delegate {
+            Dispatcher.Invoke(new Action(delegate
+            {
                 a = cbrptbymem.SelectedValue.ToString();
             }));
 
@@ -145,48 +145,41 @@ namespace AutoCodeGenerator.Views
             // this holds all generated output 
             StringBuilder sb = new StringBuilder();
 
-            for (int i = 0; i <= GetMax()-1; i++)
+            for (int i = 0; i <= GetMax() - 1; i++)
             {
+
+                dc.CodeTypeToGenerate = Enums.CodeType.BusinessEntity;
+                //GenerateCSharpCode(dc, items, max, sb)
                 GenerateCSharpCode(dc, items[i].ToString(), max, sb);
 
-                //dc.StoredProcedure = items(i).ToString;
-                //BO.GenerateCSharpCode(dc);
-                //ProgressBar1.Value = i + 1;
-                //_with1.Append(dc.CodeOutput);
+                dc.CodeTypeToGenerate = Enums.CodeType.DataAccess;
+                GenerateCSharpCode(dc, items[i].ToString(), max, sb);
+
+
+                if (ConfigurationManager.AppSettings.Get("cacheImplementation").Equals("off", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    dc.CodeTypeToGenerate = Enums.CodeType.BusinessObject;
+                }
+                else
+                {
+                    dc.CodeTypeToGenerate = Enums.CodeType.BusinessObjectCached;
+                }
+
+                GenerateCSharpCode(dc, items[i].ToString(), max, sb);
+
+                dc.CodeTypeToGenerate = Enums.CodeType.IServiceCallCode;
+                GenerateCSharpCode(dc, items[i].ToString(), max, sb);
+
+                dc.CodeTypeToGenerate = Enums.CodeType.ServiceCallCode;
+                GenerateCSharpCode(dc, items[i].ToString(), max, sb);
+
+
+                if (ConfigurationManager.AppSettings.Get("cacheImplementation").Equals("off", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    max = 0;
+                }
+                //GenerateAppSettingDuration(dc, items, max, sb);
             }
-
-
-
-           // GenerateCSharpCode(dc, items, max, sb);
-
-            //dc.CodeTypeToGenerate = Enums.CodeType.DataAccess
-            //GenerateCSharpCode(dc, items, max, sb)
-
-            //If ConfigurationManager.AppSettings("cacheImplementation").Equals("off", StringComparison.InvariantCultureIgnoreCase) Then
-            //    dc.CodeTypeToGenerate = Enums.CodeType.BusinessObject
-            //Else
-            //    dc.CodeTypeToGenerate = Enums.CodeType.BusinessObjectCached
-            //End If
-
-            //GenerateCSharpCode(dc, items, max, sb)
-
-            //dc.CodeTypeToGenerate = Enums.CodeType.IServiceCallCode
-            //GenerateCSharpCode(dc, items, max, sb)
-
-            //dc.CodeTypeToGenerate = Enums.CodeType.ServiceCallCode
-            //GenerateCSharpCode(dc, items, max, sb)
-
-            //if (System.Configuration.ConfigurationManager.AppSettings["cacheImplementation"].Equals("off", StringComparison.InvariantCultureIgnoreCase))
-            //{
-            //    max = 0;
-            //}
-
-            //GenerateAppSettingDuration(dc, items, max, sb);
-
-            // CodeOutput.Text = sb.ToString
-
-            //  SetFinalAppearance()
-            // dc = null;
 
         }
 
@@ -232,75 +225,212 @@ namespace AutoCodeGenerator.Views
 
         private void GenerateCSharpCode(BE dc, string sp_name, int spno, StringBuilder allCode)
         {
+            applicationPath = System.AppDomain.CurrentDomain.BaseDirectory.Replace(@"\bin\Debug\", "");
+            applicationPath = applicationPath.Replace(@"Generator\AutoCodeGenerator", "");
+            applicationPath = applicationPath.Replace(@"Generator\\AutoCodeGenerator", "");
+            applicationPath = applicationPath + "Projects\\" ;
+
+            string foldername = "";
+            if (dc.CodeTypeToGenerate.ToString() == "BusinessEntity")
+            {
+
+                foldername = "BusinessEntities";
+            }
+            else if (dc.CodeTypeToGenerate.ToString() == "BusinessObjects")
+            {
+                foldername = "BusinessObjects";
+            }
+            else if (dc.CodeTypeToGenerate.ToString() == "ServiceCallCode")
+            {
+                foldername = "BusinessObjects";
+            }
+            else if (dc.CodeTypeToGenerate.ToString() == "BusinessObjectCached")
+            {
+                foldername = "BusinessObjects";
+            }
+            else if (dc.CodeTypeToGenerate.ToString() == "DataAccess")
+            {
+
+                foldername = "DataAccessLayer";
+            }
+            else if (dc.CodeTypeToGenerate.ToString() == "IServiceCallCode")
+            {
+
+                foldername = "UserInterface";
+            }
+            //applicationPath = applicationPath + foldername + "\\";
+
+
             string[] arr = sp_name.Split('_');
             dc.Package = sp_name;//"EzRide_RDR";//arr[1];
-            dc.CodeTypeToGenerate = Enums.CodeType.API;
+            //dc.CodeTypeToGenerate = Enums.CodeType.BusinessEntity;
 
             StringBuilder sb = new StringBuilder();  // this holds code generated in this pass 
             string classBaseName = BO.GetClassName(dc);
-          //  string className = "";
+            string className = "";
 
-            var _with1 = sb;
-            _with1.AppendLine("//************************************************************");
-            _with1.AppendLine("//*                New Code Block                            *");
-            _with1.AppendLine("//************************************************************");
+            //sb.Append("//************************************************************");
+            //sb.Append("//*                New Code Block                            *");
+            //sb.Append("//************************************************************");
+
             switch (dc.CodeTypeToGenerate)
             {
-                case Enums.CodeType.API:
-                    //className = classBaseName +  " Contoller";
-                    _with1.AppendLine("using System;");
-                    _with1.AppendLine("using System.Collections.Generic;");
-                    _with1.AppendLine("using System.Linq;");
-                    _with1.AppendLine("using System.Net;");
-                    _with1.AppendLine("using System.Net.Http;");
-                    _with1.AppendLine("namespace " + ConfigurationManager.AppSettings["Namespace"] + "_web.Controllers");
-                    _with1.AppendLine("{");
-                    _with1.AppendLine("public class " + classBaseName + "Controller : ApiController");
-                    _with1.AppendLine("{");
-                    _with1.AppendLine("#region " + classBaseName + " Methods" + "");
+                case Enums.CodeType.BusinessObject:
+                    AddAWholeFile(applicationPath + @"\CsharpBOImports.txt", ref sb);
+                    className = classBaseName + "BO";
+                    sb.AppendLine("public class " + className);
+                    sb.AppendLine("{");
+                    break;
+                case Enums.CodeType.BusinessObjectCached:
+                    AddAWholeFile(applicationPath + @"\CsharpBOImports.txt", ref sb);
+                    className = classBaseName + "BO";
+                    sb.AppendLine("public class " + className);
+                    sb.AppendLine("{");
+                    break;
+                case Enums.CodeType.DataAccess:
+                    AddAWholeFile(applicationPath + @"\CsharpBOImports.txt", ref sb);
+                    className = classBaseName + "DO";
+                    sb.AppendLine("");
+                    sb.AppendLine("public class " + className);
+                    sb.AppendLine("{");
+                    break;
+                case Enums.CodeType.IServiceCallCode:
+                    className = "I" + classBaseName + "DataService";
+                    sb.AppendLine("using System.ServiceModel;");
+                    sb.AppendLine("[ServiceContract()]");
+                    sb.AppendLine("public interface " + dc.InterfaceName);
+                    sb.AppendLine("{");
+                    sb.AppendLine("#region " + className + " Methods");
+                    break;
+                case Enums.CodeType.ServiceCallCode:
+                    className = classBaseName + "DataService";
+                    sb.AppendLine("using System;");
+                    sb.AppendLine("using PA.DPW.PACSES.Utilities;");
+                    sb.AppendLine("public class " + className + "DataService");
+                    sb.Append(": " + dc.InterfaceName);
+                    sb.AppendLine("{");
+                    sb.AppendLine("#region " + className + " Methods");
+                    break;
+                case Enums.CodeType.BusinessEntity:
+                    sb.AppendLine("using System.Runtime.Serialization;");
+                    sb.AppendLine("using System;");
+                    sb.AppendLine("using System.Data;");
+                    className = classBaseName + "BE";
+                    sb.AppendLine("namespace " + className);
+                    sb.AppendLine("{");
+                    break;
+                default:
+                    className = "UnknownCodeType";
                     break;
 
             }
 
             //for (int i = 0; i <= max; i++)
             //{
-            //    dc.StoredProcedure = items(i).ToString;
-            //    BO.GenerateCSharpCode(dc);
+             dc.StoredProcedure = dc.Package;
+            GenerateCSharpCode1(dc);
             //    ProgressBar1.Value = i + 1;
             //    _with1.Append(dc.CodeOutput);
             //}
 
             switch (dc.CodeTypeToGenerate)
             {
-                case Enums.CodeType.API:
-                    _with1.AppendLine("#endregion");
-                    _with1.AppendLine("}");
-                    _with1.AppendLine("}");
+                case Enums.CodeType.IServiceCallCode:
+                    sb.AppendLine("#endregion");
+                    sb.AppendLine("}");
+                    break;
+                case Enums.CodeType.DataAccess:
+                    AddAWholeFile(applicationPath + "\\CsharpparameterConversionFunctions.txt", ref sb);
+                    sb.AppendLine("}");
+                    break;
+                case Enums.CodeType.BusinessObject:
+                    sb.AppendLine("}");
+                    break;
+                case Enums.CodeType.BusinessObjectCached:
+                    AddAWholeFile(applicationPath + "\\CsharpcacheKeyHelper.txt", ref sb);
+                    sb.AppendLine("}");
+                    break;
+                case Enums.CodeType.ServiceCallCode:
+                    sb.AppendLine("#endregion");
+                    sb.AppendLine("}");
+                    break;
+                case Enums.CodeType.BusinessEntity:
+                    sb.AppendLine("}");
                     break;
                 default:
                     break;
             }
-            //D:\working\CodeGenerator\Generator\AutoCodeGenerator
-            applicationPath = applicationPath.Replace(@"Generator\AutoCodeGenerator", "");
-            applicationPath = applicationPath.Replace(@"Generator\\AutoCodeGenerator", "");
-            applicationPath = applicationPath + "Projects\\CodeGenerator_web\\Controllers\\";
 
-            FileInfo fileInfo = new FileInfo(applicationPath + classBaseName + "Contoller.cs");
+
+
+
+            //applicationPath = path.Replace(@"\bin\Debug\", "");
+            //applicationPath = applicationPath.Replace(@"Generator\AutoCodeGenerator", "");
+            //applicationPath = applicationPath.Replace(@"Generator\\AutoCodeGenerator", "");
+            //applicationPath = applicationPath + "Projects\\" + foldername + "\\";
+
+            applicationPath = applicationPath + foldername + "\\";
+            FileInfo fileInfo = new FileInfo(applicationPath + className + ".cs");
 
             if (!fileInfo.Exists)
             {
 
                 // Create the file.
-                using (FileStream fs = File.Create(applicationPath + classBaseName + "Contoller.cs"))
+                using (FileStream fs = File.Create(applicationPath + className + ".cs"))
                 {
-                    
+
                 }
             }
 
-            WriteTheFile(applicationPath + "" + classBaseName + "Contoller.cs", sb);
+            WriteTheFile(applicationPath + "" + className + ".cs", sb);
 
             //allCode.Append(sb.ToString);
 
+        }
+
+        public static void GenerateCSharpCode1(BE dc)
+        {
+            StringBuilder sb = new StringBuilder();
+            OracleConnection conn = new OracleConnection(UtilConstants.mssqldb);
+            conn.Open();
+            OracleCommand cmd = BO.GetOracleCommand(conn, dc);
+
+            BO.methodName = BO.GetMethodName(dc.StoredProcedure.ToLower());
+            BO.entityName = BO.GetMethodName(dc.Package) + "BE." + BO.methodName + "BE";
+            switch (dc.CodeTypeToGenerate)
+            {
+                case Enums.CodeType.BusinessEntity:
+                    BO.WriteCSharpBusinessEntity(cmd, sb, dc);
+                    break;
+                //case Enums.CodeType.BusinessObject:
+                //    WriteCSharpBusinessObject(cmd, sb, dc);
+                //    break;
+                //case Enums.CodeType.BusinessObjectCached:
+                //    WritecSharpBusinessObjectCached(cmd, sb, dc);
+                //    break;
+                //case Enums.CodeType.IServiceCallCode:
+                //    WriteCSharpIServiceInterface(cmd, sb, dc);
+                //    break;
+                //case Enums.CodeType.ServiceCallCode:
+                //    WriteCSharpServiceMethods(cmd, sb, dc);
+                //    break;
+                //case Enums.CodeType.DataAccess:
+                //    WriteCSharpDataAccessCode(cmd, sb, dc);
+                //    break;
+                default:
+                    break;
+                    // forget it 
+            }
+
+            conn.Close();
+            //dc.CodeOutput = sb.ToString;
+        }
+
+        private void AddAWholeFile(string fileName, ref StringBuilder sb)
+        {
+            StreamReader rdr = new StreamReader(fileName);
+            sb.Append(rdr.ReadToEnd());
+            rdr.Close();
         }
 
         private void WriteTheFile(string fileName, StringBuilder sb)
@@ -423,7 +553,7 @@ namespace AutoCodeGenerator.Views
 
         private void btnsubmit_OnClick(object sender, RoutedEventArgs e)
         {
-          
+
             try
             {
 
@@ -436,7 +566,7 @@ namespace AutoCodeGenerator.Views
                     objCmd.CommandType = CommandType.StoredProcedure;
                     objCmd.Parameters.Add("p_cur_ref", OracleType.Cursor).Direction = ParameterDirection.Output;
                     objCmd.Parameters.Add("p_nam_owner", OracleType.VarChar, 30).Value = DBNull.Value.ToString();
-                    objCmd.Parameters.Add("p_nam_pkge", OracleType.VarChar, 30).Value =DBNull.Value.ToString();
+                    objCmd.Parameters.Add("p_nam_pkge", OracleType.VarChar, 30).Value = DBNull.Value.ToString();
 
                     objConn.Open();
                     OracleDataAdapter da = new OracleDataAdapter(objCmd);
@@ -464,53 +594,53 @@ namespace AutoCodeGenerator.Views
 
         }
 
-        private void GenerateCSharpCode_old(BE dc, ArrayList items, int max, StringBuilder allCode)
-        {
-            dc.CodeTypeToGenerate = Enums.CodeType.API;
+        //private void GenerateCSharpCode_old(BE dc, ArrayList items, int max, StringBuilder allCode)
+        //{
+        //    dc.CodeTypeToGenerate = Enums.CodeType.API;
 
-            StringBuilder sb = new StringBuilder();  // this holds code generated in this pass 
-            string classBaseName = BO.GetClassName(dc);
-            string className = "";
+        //    StringBuilder sb = new StringBuilder();  // this holds code generated in this pass 
+        //    string classBaseName = BO.GetClassName(dc);
+        //    string className = "";
 
-            var _with1 = sb;
-            _with1.AppendLine("//************************************************************");
-            _with1.AppendLine("//*                New Code Block                            *");
-            _with1.AppendLine("//************************************************************");
-            switch (dc.CodeTypeToGenerate)
-            {
-                case Enums.CodeType.API:
-                    className = classBaseName + "DataService";
-                    _with1.AppendLine("using System;");
-                    _with1.AppendLine("using PA.DPW.PACSES.Utilities;");
-                    _with1.AppendLine("public class " + className + "Controller");
-                    _with1.Append(": " + dc.InterfaceName);
-                    _with1.AppendLine("{");
-                    _with1.AppendLine("#region " + className + " Methods" + "");
-                    break;
+        //    var _with1 = sb;
+        //    _with1.AppendLine("//************************************************************");
+        //    _with1.AppendLine("//*                New Code Block                            *");
+        //    _with1.AppendLine("//************************************************************");
+        //    switch (dc.CodeTypeToGenerate)
+        //    {
+        //        case Enums.CodeType.API:
+        //            className = classBaseName + "DataService";
+        //            _with1.AppendLine("using System;");
+        //            _with1.AppendLine("using PA.DPW.PACSES.Utilities;");
+        //            _with1.AppendLine("public class " + className + "Controller");
+        //            _with1.Append(": " + dc.InterfaceName);
+        //            _with1.AppendLine("{");
+        //            _with1.AppendLine("#region " + className + " Methods" + "");
+        //            break;
 
-            }
+        //    }
 
-            //for (int i = 0; i <= max; i++)
-            //{
-            //    dc.StoredProcedure = items(i).ToString;
-            //    BO.GenerateCSharpCode(dc);
-            //    ProgressBar1.Value = i + 1;
-            //    _with1.Append(dc.CodeOutput);
-            //}
+        //    //for (int i = 0; i <= max; i++)
+        //    //{
+        //    //    dc.StoredProcedure = items(i).ToString;
+        //    //    BO.GenerateCSharpCode(dc);
+        //    //    ProgressBar1.Value = i + 1;
+        //    //    _with1.Append(dc.CodeOutput);
+        //    //}
 
-            switch (dc.CodeTypeToGenerate)
-            {
-                case Enums.CodeType.API:
-                    _with1.AppendLine("#endregion");
-                    _with1.AppendLine("}");
-                    break;
-                default:
-                    break;
-            }
+        //    switch (dc.CodeTypeToGenerate)
+        //    {
+        //        case Enums.CodeType.API:
+        //            _with1.AppendLine("#endregion");
+        //            _with1.AppendLine("}");
+        //            break;
+        //        default:
+        //            break;
+        //    }
 
-            WriteTheFile(applicationPath + "" + className + ".cs", sb);
-            //allCode.Append(sb.ToString);
+        //    WriteTheFile(applicationPath + "" + className + ".cs", sb);
+        //    //allCode.Append(sb.ToString);
 
-        }
+        //}
     }
 }

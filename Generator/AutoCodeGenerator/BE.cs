@@ -11,16 +11,18 @@ namespace AutoCodeGenerator
     {
         public enum CodeType
         {
-            API,
-            BAL,
-            DAL,
-            BO
-            
+            BusinessEntity,
+            DataAccess,
+            BusinessObject,
+            BusinessObjectCached,
+            IServiceCallCode,
+            ServiceCallCode,
+
         }
     }
     public class BE
     {
-      
+
         private DataSet _packages;
         private DataSet _storedProcedures;
         private DataSet _standardAbbreviations;

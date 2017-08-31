@@ -1,0 +1,7 @@
+public static string ConvertToString(object parameterValue)
+{
+	if (parameterValue == null) {
+		return string.Empty;
+	}
+	return parameterValue.ToString();
+}

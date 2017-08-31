@@ -1,0 +1,27 @@
+Public Shared Function GetStringValue(ByVal dataProvider As BaseDataProvider, ByVal command As DbCommand, ByVal parameterName As String) As String
+If Convert.IsDBNull(dataProvider.GetParameterValue(command, parameterName)) Then
+Return String.Empty
+End If
+Return dataProvider.GetParameterValue(command, parameterName).ToString
+End Function
+
+Public Shared Function GetDateValue(ByVal dataProvider As BaseDataProvider, ByVal command As DbCommand, ByVal parameterName As String) As Date
+If Convert.IsDBNull(dataProvider.GetParameterValue(command, parameterName)) Then
+Return Convert.ToDateTime(System.DBNull.Value)
+End If
+Return Convert.ToDateTime(dataProvider.GetParameterValue(command, parameterName))
+End Function
+
+Public Shared Function GetDecimalValue(ByVal dataProvider As BaseDataProvider, ByVal command As DbCommand, ByVal parameterName As String) As Decimal
+If Convert.IsDBNull(dataProvider.GetParameterValue(command, parameterName)) Then
+Return Convert.ToDecimal(System.DBNull.Value)
+End If
+Return Convert.ToDecimal(dataProvider.GetParameterValue(command, parameterName))
+End Function
+
+Public Shared Function GetIntegerValue(ByVal dataProvider As BaseDataProvider, ByVal command As DbCommand, ByVal parameterName As String) As Integer
+If Convert.IsDBNull(dataProvider.GetParameterValue(command, parameterName)) Then
+Return Convert.ToInt32(System.DBNull.Value)
+End If
+Return Convert.ToInt32(dataProvider.GetParameterValue(command, parameterName))
+End Function

@@ -1,0 +1,7 @@
+
+Public Shared Function ConvertToString(ByVal parameterValue As Object) As String
+If parameterValue Is Nothing Then
+Return String.Empty
+End If
+Return parameterValue.ToString
+End Function

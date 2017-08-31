@@ -1,0 +1,9 @@
+D:\working\CodeGenerator\Projects\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\working\CodeGenerator\Projects\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\working\CodeGenerator\Projects\DataAccessLayer\bin\Debug\BusinessEntities.dll
+D:\working\CodeGenerator\Projects\DataAccessLayer\bin\Debug\PA.DPW.PACSES.ExternalAssemblies.dll
+D:\working\CodeGenerator\Projects\DataAccessLayer\bin\Debug\BusinessEntities.pdb
+D:\working\CodeGenerator\Projects\DataAccessLayer\bin\Debug\PA.DPW.PACSES.ExternalAssemblies.pdb
+D:\working\CodeGenerator\Projects\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\working\CodeGenerator\Projects\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\working\CodeGenerator\Projects\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
