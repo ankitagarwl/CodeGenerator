@@ -15504,4 +15504,10 @@
     <Abbreviation>RDR</Abbreviation>
   </standardabbreviations>
 
+  <standardabbreviations>
+    <ID>3099</ID>
+    <Description>ID</Description>
+    <Abbreviation>ID</Abbreviation>
+  </standardabbreviations>
+
 </dataroot>

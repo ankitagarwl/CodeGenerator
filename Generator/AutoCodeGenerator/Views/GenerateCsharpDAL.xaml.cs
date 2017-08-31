@@ -148,9 +148,8 @@ namespace AutoCodeGenerator.Views
             for (int i = 0; i <= GetMax() - 1; i++)
             {
 
-                //dc.CodeTypeToGenerate = Enums.CodeType.BusinessEntity;
-                ////GenerateCSharpCode(dc, items, max, sb)
-                //GenerateCSharpCode(dc, items[i].ToString(), max, sb);
+                dc.CodeTypeToGenerate = Enums.CodeType.BusinessEntity;
+                GenerateCSharpCode(dc, items[i].ToString(), max, sb);
 
                 //dc.CodeTypeToGenerate = Enums.CodeType.DataAccess;
                 //GenerateCSharpCode(dc, items[i].ToString(), max, sb);
@@ -306,18 +305,18 @@ namespace AutoCodeGenerator.Views
                     sb.AppendLine("using System;");
                     //sb.AppendLine("using PA.DPW.PACSES.Utilities;");
                     sb.AppendLine("public class " + className + "DataService");
-                    sb.Append(": "+ className + dc.InterfaceName);
+                    sb.Append(": "+ " I" + className + dc.InterfaceName);
                     sb.AppendLine("{");
                     sb.AppendLine("#region " + className + " Methods");
                     break;
-                //case Enums.CodeType.BusinessEntity:
-                //    sb.AppendLine("using System.Runtime.Serialization;");
-                //    sb.AppendLine("using System;");
-                //    sb.AppendLine("using System.Data;");
-                //    className = classBaseName + "BE";
-                //    sb.AppendLine("namespace " + className);
-                //    sb.AppendLine("{");
-                //    break;
+                case Enums.CodeType.BusinessEntity:
+                    sb.AppendLine("using System.Runtime.Serialization;");
+                    sb.AppendLine("using System;");
+                    sb.AppendLine("using System.Data;");
+                    className = classBaseName + "BE";
+                    sb.AppendLine("namespace " + className);
+                    sb.AppendLine("{");
+                    break;
                 default:
                     className = "UnknownCodeType";
                     break;
@@ -327,7 +326,7 @@ namespace AutoCodeGenerator.Views
             //for (int i = 0; i <= max; i++)
             //{
              dc.StoredProcedure = dc.Package;
-            GenerateCSharpCode1(dc);
+            GenerateCSharpCode1(dc,ref sb);
             //    ProgressBar1.Value = i + 1;
             //    _with1.Append(dc.CodeOutput);
             //}
@@ -353,9 +352,9 @@ namespace AutoCodeGenerator.Views
                     sb.AppendLine("#endregion");
                     sb.AppendLine("}");
                     break;
-                //case Enums.CodeType.BusinessEntity:
-                //    sb.AppendLine("}");
-                //    break;
+                case Enums.CodeType.BusinessEntity:
+                    sb.AppendLine("}");
+                    break;
                 default:
                     break;
             }
@@ -387,9 +386,8 @@ namespace AutoCodeGenerator.Views
 
         }
 
-        public static void GenerateCSharpCode1(BE dc)
+        public static void GenerateCSharpCode1(BE dc,ref StringBuilder sb)
         {
-            StringBuilder sb = new StringBuilder();
             OracleConnection conn = new OracleConnection(UtilConstants.mssqldb);
             conn.Open();
             OracleCommand cmd = BO.GetOracleCommand(conn, dc);
@@ -398,9 +396,9 @@ namespace AutoCodeGenerator.Views
             BO.entityName = BO.GetMethodName(dc.Package) + "BE." + BO.methodName + "BE";
             switch (dc.CodeTypeToGenerate)
             {
-                //case Enums.CodeType.BusinessEntity:
-                //    BO.WriteCSharpBusinessEntity(cmd, sb, dc);
-                //    break;
+                case Enums.CodeType.BusinessEntity:
+                    BO.WriteCSharpBusinessEntity(cmd, sb, dc);
+                    break;
                 //case Enums.CodeType.BusinessObject:
                 //    WriteCSharpBusinessObject(cmd, sb, dc);
                 //    break;
@@ -408,7 +406,7 @@ namespace AutoCodeGenerator.Views
                 //    WritecSharpBusinessObjectCached(cmd, sb, dc);
                 //    break;
                 case Enums.CodeType.IServiceCallCode:
-                    BO.WriteCSharpIServiceInterface(cmd, sb, dc);
+                    BO.WriteCSharpIServiceInterface(cmd,ref sb, dc);
                     break;
                 case Enums.CodeType.ServiceCallCode:
                     BO.WriteCSharpServiceMethods(cmd, sb, dc);

@@ -48,14 +48,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoCodeGenerator.exe" size="825344">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoCodeGenerator.exe" size="825856">
       <assemblyIdentity name="AutoCodeGenerator" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Mrz7MswjCZpncOT06KgaDP55h2NRJC2IbsqJfgor6HY=</dsig:DigestValue>
+        <dsig:DigestValue>wDycGcZL8cqBV6qbyxSbnepxefWSGtuSBYGfTusQ1OI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -203,13 +203,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AutoCodeGenerator.exe.config" size="2947">
+  <file name="AutoCodeGenerator.exe.config" size="2978">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>DsXs1GLH6O5uvPvARmQSykoRBzYZSFvo0is3yT061wE=</dsig:DigestValue>
+      <dsig:DigestValue>9MztpJWVY1SoL6Eu126aeHEb0YG2tuEVL2+km0YML9k=</dsig:DigestValue>
     </hash>
   </file>
   <file name="favicon.ico" size="1086">

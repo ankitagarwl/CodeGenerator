@@ -807,7 +807,7 @@ namespace AutoCodeGenerator
         //    sb.AppendLine("End Function");
         //}
 
-        public static void WriteCSharpIServiceInterface(OracleCommand cmd, StringBuilder sb, BE dc)
+        public static void WriteCSharpIServiceInterface(OracleCommand cmd,ref StringBuilder sb, BE dc)
         {
             sb.AppendLine("[OperationContract()]");
             sb.AppendLine(entityName + " " + methodName + "(" + entityName + " entity );");
@@ -1145,7 +1145,7 @@ namespace AutoCodeGenerator
         {
             ds = dc.StandardAbbreviations;
             OracleCommand cmd = conn.CreateCommand();
-            cmd.CommandText = dc.Owner + "." + dc.Package + "." + dc.StoredProcedure;
+            cmd.CommandText = "EZRIDE_RDR";//"EZRIDE_RDR";//dc.Owner + "." + dc.Package + "." + dc.StoredProcedure; ezride.EZRIDE_RDR.EZRIDE_RDR
             cmd.CommandType = CommandType.StoredProcedure;
 
             var _with11 = conn;
