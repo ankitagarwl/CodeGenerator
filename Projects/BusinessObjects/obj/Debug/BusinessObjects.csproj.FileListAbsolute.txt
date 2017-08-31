@@ -7,3 +7,7 @@ D:\working\CodeGenerator\Projects\BusinessObjects\bin\Debug\DataAccessLayer.pdb
 D:\working\CodeGenerator\Projects\BusinessObjects\obj\Debug\BusinessObjects.csprojResolveAssemblyReference.cache
 D:\working\CodeGenerator\Projects\BusinessObjects\obj\Debug\BusinessObjects.dll
 D:\working\CodeGenerator\Projects\BusinessObjects\obj\Debug\BusinessObjects.pdb
+D:\working\Code_Generator\AutoCodeGen\BusinessObjects\bin\Debug\BusinessObjects.dll
+D:\working\Code_Generator\AutoCodeGen\BusinessObjects\bin\Debug\BusinessObjects.pdb
+D:\working\Code_Generator\AutoCodeGen\BusinessObjects\obj\Debug\BusinessObjects.dll
+D:\working\Code_Generator\AutoCodeGen\BusinessObjects\obj\Debug\BusinessObjects.pdb

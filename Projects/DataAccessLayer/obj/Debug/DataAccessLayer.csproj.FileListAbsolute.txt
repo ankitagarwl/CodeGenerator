@@ -7,3 +7,12 @@ D:\working\CodeGenerator\Projects\DataAccessLayer\bin\Debug\PA.DPW.PACSES.Extern
 D:\working\CodeGenerator\Projects\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 D:\working\CodeGenerator\Projects\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\working\CodeGenerator\Projects\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\bin\Debug\BusinessObjects.dll
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\bin\Debug\PA.DPW.PACSES.ExternalAssemblies.dll
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\bin\Debug\BusinessObjects.pdb
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\bin\Debug\PA.DPW.PACSES.ExternalAssemblies.pdb
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\working\Code_Generator\AutoCodeGen\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

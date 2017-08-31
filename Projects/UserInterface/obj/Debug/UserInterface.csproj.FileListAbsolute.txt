@@ -16,3 +16,16 @@ D:\working\CodeGenerator\Projects\UserInterface\obj\Debug\UserInterface.Properti
 D:\working\CodeGenerator\Projects\UserInterface\obj\Debug\UserInterface.csproj.GenerateResource.Cache
 D:\working\CodeGenerator\Projects\UserInterface\obj\Debug\UserInterface.exe
 D:\working\CodeGenerator\Projects\UserInterface\obj\Debug\UserInterface.pdb
+D:\working\Code_Generator\AutoCodeGen\UserInterface\bin\Debug\UserInterface.exe.config
+D:\working\Code_Generator\AutoCodeGen\UserInterface\bin\Debug\UserInterface.exe
+D:\working\Code_Generator\AutoCodeGen\UserInterface\bin\Debug\UserInterface.pdb
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\MainWindow.g.cs
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\App.g.cs
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\UserInterface_MarkupCompile.cache
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\UserInterface_MarkupCompile.lref
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\MainWindow.baml
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\UserInterface.g.resources
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\UserInterface.Properties.Resources.resources
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\UserInterface.csproj.GenerateResource.Cache
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\UserInterface.exe
+D:\working\Code_Generator\AutoCodeGen\UserInterface\obj\Debug\UserInterface.pdb

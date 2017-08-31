@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
-      <Project>{0de16802-7476-4e2b-aef0-074f0cad58db}</Project>
-      <Name>BusinessEntities</Name>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj">
+      <Project>{b9b39241-bc15-4675-b993-608dd9e13283}</Project>
+      <Name>BusinessObjects</Name>
     </ProjectReference>
     <ProjectReference Include="..\PA.DPW.PACSES.ExternalAssemblies\PA.DPW.PACSES.ExternalAssemblies.csproj">
       <Project>{8df39733-dd1a-4325-81e6-f6fa86d37ba5}</Project>

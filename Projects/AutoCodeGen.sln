@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{B9B39241-BC15-4675-B993-608DD9E13283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{3ECDA656-80C7-4FFD-9A8D-961118911E7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PA.DPW.PACSES.ExternalAssemblies", "PA.DPW.PACSES.ExternalAssemblies\PA.DPW.PACSES.ExternalAssemblies.csproj", "{8DF39733-DD1A-4325-81E6-F6FA86D37BA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution_Files", "Solution_Files", "{71C1BC79-FEA9-49D8-9B7D-68F9CE4618BC}"
+	ProjectSection(SolutionItems) = preProject
+		SolutionFiles\BOImports.txt = SolutionFiles\BOImports.txt
+		SolutionFiles\cacheKeyHelper.txt = SolutionFiles\cacheKeyHelper.txt
+		SolutionFiles\CsharpBOImports.txt = SolutionFiles\CsharpBOImports.txt
+		SolutionFiles\CsharpcacheKeyHelper.txt = SolutionFiles\CsharpcacheKeyHelper.txt
+		SolutionFiles\CSharpDOImports.txt = SolutionFiles\CSharpDOImports.txt
+		SolutionFiles\CsharpParameterConversionFunctions.txt = SolutionFiles\CsharpParameterConversionFunctions.txt
+		SolutionFiles\DALGenerator.doc = SolutionFiles\DALGenerator.doc
+		SolutionFiles\DOImports.txt = SolutionFiles\DOImports.txt
+		SolutionFiles\merge.vbs = SolutionFiles\merge.vbs
+		SolutionFiles\msbuild.command.txt = SolutionFiles\msbuild.command.txt
+		SolutionFiles\parameterConversionFunctions.txt = SolutionFiles\parameterConversionFunctions.txt
+		SolutionFiles\pkg_genr_data_access_layer.sql = SolutionFiles\pkg_genr_data_access_layer.sql
+		SolutionFiles\project.sql = SolutionFiles\project.sql
+		SolutionFiles\standardabbreviations.xml = SolutionFiles\standardabbreviations.xml
+		SolutionFiles\SVCGenerator.doc = SolutionFiles\SVCGenerator.doc
+		SolutionFiles\TextFile1.txt = SolutionFiles\TextFile1.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{F219EF53-EFF6-4BE6-92A8-AF05E495F076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{7FD773A9-A4EC-4A38-BAB0-F02F647A4EAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9B39241-BC15-4675-B993-608DD9E13283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B39241-BC15-4675-B993-608DD9E13283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B39241-BC15-4675-B993-608DD9E13283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B39241-BC15-4675-B993-608DD9E13283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECDA656-80C7-4FFD-9A8D-961118911E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECDA656-80C7-4FFD-9A8D-961118911E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECDA656-80C7-4FFD-9A8D-961118911E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECDA656-80C7-4FFD-9A8D-961118911E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DF39733-DD1A-4325-81E6-F6FA86D37BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF39733-DD1A-4325-81E6-F6FA86D37BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF39733-DD1A-4325-81E6-F6FA86D37BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF39733-DD1A-4325-81E6-F6FA86D37BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F219EF53-EFF6-4BE6-92A8-AF05E495F076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F219EF53-EFF6-4BE6-92A8-AF05E495F076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F219EF53-EFF6-4BE6-92A8-AF05E495F076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F219EF53-EFF6-4BE6-92A8-AF05E495F076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD773A9-A4EC-4A38-BAB0-F02F647A4EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD773A9-A4EC-4A38-BAB0-F02F647A4EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD773A9-A4EC-4A38-BAB0-F02F647A4EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD773A9-A4EC-4A38-BAB0-F02F647A4EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

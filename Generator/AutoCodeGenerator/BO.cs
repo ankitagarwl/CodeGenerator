@@ -807,6 +807,12 @@ namespace AutoCodeGenerator
         //    sb.AppendLine("End Function");
         //}
 
+        public static void WriteCSharpIServiceInterface(OracleCommand cmd, StringBuilder sb, BE dc)
+        {
+            sb.AppendLine("[OperationContract()]");
+            sb.AppendLine(entityName + " " + methodName + "(" + entityName + " entity );");
+            sb.AppendLine(string.Empty);
+        }
 
         //private static void WritecSharpBusinessObjectCached(OracleCommand cmd, StringBuilder sb, BE dc)
         //{
@@ -913,35 +919,28 @@ namespace AutoCodeGenerator
         //    sb.AppendLine("End Function");
         //}
 
-        //private static void WriteCSharpServiceMethods(OracleCommand cmd, StringBuilder sb, BE dc)
-        //{
-        //    string businessObjectNameName = GetMethodName(dc.Package) + "BO.";
-        //    sb.AppendLine("public " + entityName + " " + methodName + "( " + entityName + " " + "entity" + ") {");
-        //    sb.AppendLine("     " + "try {");
-        //    sb.AppendLine("         " + "entity = " + businessObjectNameName + methodName + "(entity);");
-        //    sb.AppendLine("     " + "}");
-        //    sb.AppendLine("     " + "catch (Exception ex){");
-        //    sb.AppendLine("         " + "ExceptionManager.HandleException(ex);");
-        //    sb.AppendLine("         " + "throw;");
-        //    sb.AppendLine("     " + "}");
-        //    sb.AppendLine("     " + "finally {");
-        //    sb.AppendLine(string.Empty);
-        //    sb.AppendLine("     " + "}");
-        //    sb.AppendLine("     " + "return entity;");
-        //    sb.AppendLine("}");
-        //}
+        public static void WriteCSharpServiceMethods(OracleCommand cmd, StringBuilder sb, BE dc)
+        {
+            string businessObjectNameName = GetMethodName(dc.Package) + "BO.";
+            sb.AppendLine("public " + entityName + " " + methodName + "( " + entityName + " " + "entity" + ") {");
+            sb.AppendLine("     " + "try {");
+            sb.AppendLine("         " + "entity = " + businessObjectNameName + methodName + "(entity);");
+            sb.AppendLine("     " + "}");
+            sb.AppendLine("     " + "catch (Exception ex){");
+            sb.AppendLine("         " + "ExceptionManager.HandleException(ex);");
+            sb.AppendLine("         " + "throw;");
+            sb.AppendLine("     " + "}");
+            sb.AppendLine("     " + "finally {");
+            sb.AppendLine(string.Empty);
+            sb.AppendLine("     " + "}");
+            sb.AppendLine("     " + "return entity;");
+            sb.AppendLine("}");
+        }
 
         //private static void WriteIServiceInterface(OracleCommand cmd, StringBuilder sb, BE dc)
         //{
         //    sb.AppendLine("[OperationContract()]");
         //    sb.AppendLine("Function " + methodName + "(byval entity As " + entityName + ") As " + entityName);
-        //    sb.AppendLine(string.Empty);
-        //}
-
-        //private static void WriteCSharpIServiceInterface(OracleCommand cmd, StringBuilder sb, BE dc)
-        //{
-        //    sb.AppendLine("[OperationContract()]");
-        //    sb.AppendLine(entityName + " " + methodName + "(" + entityName + " entity );");
         //    sb.AppendLine(string.Empty);
         //}
 

@@ -1,5 +1,9 @@
-D:\working\CodeGenerator\Projects\BusinessEntities\bin\Debug\BusinessEntities.dll
-D:\working\CodeGenerator\Projects\BusinessEntities\bin\Debug\BusinessEntities.pdb
-D:\working\CodeGenerator\Projects\BusinessEntities\obj\Debug\BusinessEntities.csprojResolveAssemblyReference.cache
-D:\working\CodeGenerator\Projects\BusinessEntities\obj\Debug\BusinessEntities.dll
-D:\working\CodeGenerator\Projects\BusinessEntities\obj\Debug\BusinessEntities.pdb
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\bin\Debug\BusinessEntities.dll
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\bin\Debug\BusinessEntities.pdb
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\bin\Debug\BusinessObjects.dll
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\bin\Debug\DataAccessLayer.dll
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\bin\Debug\BusinessObjects.pdb
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\bin\Debug\DataAccessLayer.pdb
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\obj\Debug\BusinessEntities.csprojResolveAssemblyReference.cache
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\obj\Debug\BusinessEntities.dll
+D:\working\Code_Generator\AutoCodeGen\BusinessEntities\obj\Debug\BusinessEntities.pdb
